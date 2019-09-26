@@ -7,3 +7,5 @@ O sistema tem como objetivo auxliar os médicos no processo de solicitação de 
 - [Gabriela Ferreira](https://github.com/GabrielaErz "link perfil do git hub")
 - [Kayane Rocha](https://github.com/kayanerocha "link perfil do git hub")
 
+##Links referência
+https://scotch.io/tutorials/simple-laravel-layouts-using-blade -> sidebar e outros
