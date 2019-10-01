@@ -24,7 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+<<<<<<< HEAD
         //inseri isso para suportar o tamanho do banco de dados
         Schema::defaultStringLength(191);
+=======
+        \Illuminate\Support\Facades\Schema::defaultStringLength(191);
+>>>>>>> 69870062f4010bae7e37f803fd0f156e0e563f50
     }
 }
