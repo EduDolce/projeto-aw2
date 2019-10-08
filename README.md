@@ -2,6 +2,10 @@
 
 O sistema tem como objetivo auxliar os médicos no processo de solicitação de segunda opnião médica oftamológica, onde na aplicação ele poderá enviar solicitações para médicos que estejam registrados, assim como ele também deverá estar cadastrado.
 
+
+## Caso não esteja conseguindo rodar o projeto clonado
+https://devmarketer.io/learn/setup-laravel-project-cloned-github-com/
+
 ## Quem somos? 
 - [Eduardo Dolce](https://github.com/EduDolce "link perfil do git hub")
 - [Gabriela Ferreira](https://github.com/GabrielaErz "link perfil do git hub")
@@ -10,3 +14,4 @@ O sistema tem como objetivo auxliar os médicos no processo de solicitação de 
 ## Links referência
 
 https://scotch.io/tutorials/simple-laravel-layouts-using-blade -> sidebar e outros
+
