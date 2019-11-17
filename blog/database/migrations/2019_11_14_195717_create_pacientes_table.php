@@ -15,7 +15,16 @@ class CreatePacientesTable extends Migration
     {
         Schema::create('pacientes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('iniciaisNome');
+            $table->date('dataNascimento');
+            $table->string('genero');
+            $table->integer('consultoria_id')->unsigned();
             $table->timestamps();
+            $table->SoftDeletes();
+
+            $table->foreign('consultoria_id')
+            ->references('id')->on('consultoria')
+            ->onDelete('cascade');
         });
     }
 
