@@ -66,6 +66,12 @@
                                     </form>
                                 </div>
                             </li>
+
+                            <li>
+                                <a class="nav-link" href="{{ route('consultoria.solicitar') }}">
+                                    Solicitar consultoria
+                                </a>
+                            </li>
                         @endguest
                     </ul>
                 </div>

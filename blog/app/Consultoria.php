@@ -13,4 +13,8 @@ class Consultoria extends Model
     public function paciente(){
         return $this->hasOne('App\Paciente');
     }
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

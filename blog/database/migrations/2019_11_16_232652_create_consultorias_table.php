@@ -21,7 +21,7 @@ class CreateConsultoriasTable extends Migration
             $table->text('antecedentes');
             $table->string('tratamentoPrevio');
             $table->text('tratamentoResposta');
-            $table->string('motivo');
+            $table->text('motivo');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->SoftDeletes();

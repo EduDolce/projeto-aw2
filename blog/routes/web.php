@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/consultoria/solicitar', 'ConsultoriaController@solicitar')->name('consultoria.solicitar');
