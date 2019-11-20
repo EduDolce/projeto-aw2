@@ -9,9 +9,9 @@ use App\Resposta;
 
 class ConsultoriaController extends Controller
 {
-    //public function __construct(){
-      //  $this->middleware('auth');
-    //}
+    public function __construct(){
+        $this->middleware('auth');
+    }
 
     public function solicitar(){
         return view('consultoria.solicitar');
@@ -31,24 +31,28 @@ class ConsultoriaController extends Controller
         $consultoria->historicoOcular = $request->get('historicoOcular');
         $consultoria->antecedentes = $request->get('antecedentes');
         $consultoria->tratamentoPrevio = $request->get('tratamentoPrevio');
+        $consultoria->tratamentoResposta = $request->get('tratamentoResposta');
+        $consultoria->motivo = $request->get('motivo');
         $consultoria->user()->associate($request->user());
+        $consultoria->save();
+
+        $consultoria_id = Consultoria::create($request->all());
 
         $paciente = new Paciente();
         $paciente->iniciaisNome = $request->get('iniciaisNome');
         $paciente->dataNascimento = $request->get('dataNascimento');
         $paciente->genero = $request->get('genero');
-        //$paciente->consultoria()->associate($request->consultoria());
-
-        $consultoria->save();
+        $paciente->consultoria_id = $consultoria_id->id;
+        //$paciente->consultoria()->associate($consultoria);
         $paciente->save();
 
         return 'Solicitação enviada.';
     }
 
-    public function index(){
+    public function listar(){
         $consultorias = Consultoria::get();
 
-        return view('consultoria.index', compact('consultorias'));
+        return view('consultoria.listar', compact('consultorias'));
     }
 
     public function responder(){

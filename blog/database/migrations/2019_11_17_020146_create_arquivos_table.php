@@ -1,4 +1,4 @@
-<?php
+0<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,7 +18,7 @@ class CreateArquivosTable extends Migration
             $table->string('segmentoAnterior');
             $table->string('caracteristica');
             $table->string('nome');
-            $table->integer('consultoria_id')->unsigned();
+            $table->unsignedBigInteger('consultoria_id');
             $table->timestamps();
             $table->SoftDeletes();
 

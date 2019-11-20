@@ -13,4 +13,8 @@ class Resposta extends Model
     public function consultoria(){
         return $this->belongsTo('App\Consultoria');
     }
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

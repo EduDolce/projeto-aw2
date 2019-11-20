@@ -71,13 +71,13 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="contentF">
                 <div class="title m-b-md">
                     Segunda Opinião Oftamológica
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Meu Painel</a>
+                    <a href="{{ url('/home') }}">Meu Painel</a>
                 </div>
             </div>
         </div>
