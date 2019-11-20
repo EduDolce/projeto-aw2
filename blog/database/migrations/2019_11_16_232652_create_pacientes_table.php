@@ -18,12 +18,12 @@ class CreatePacientesTable extends Migration
             $table->string('iniciaisNome');
             $table->date('dataNascimento');
             $table->string('genero');
-            $table->integer('consultoria_id')->unsigned();
+            $table->unsignedBigInteger('consultoria_id');
             $table->timestamps();
             $table->SoftDeletes();
 
             $table->foreign('consultoria_id')
-            ->references('id')->on('consultoria')
+            ->references('id')->on('consultorias')
             ->onDelete('cascade');
         });
     }

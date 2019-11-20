@@ -15,10 +15,17 @@ class CreateArquivosTable extends Migration
     {
         Schema::create('arquivos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tipo');
+            $table->string('segmentoAnterior');
             $table->string('caracteristica');
+            $table->string('nome');
+            $table->integer('consultoria_id')->unsigned();
             $table->timestamps();
             $table->SoftDeletes();
+
+            $table->foreign('consultoria_id')
+            ->references('id')
+            ->on('consultorias')
+            ->onDelete('cascade');
         });
     }
 

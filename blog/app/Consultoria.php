@@ -10,6 +10,10 @@ class Consultoria extends Model
 
     protected $fillable = ['lesaoOcular', 'tempoManifestacao', 'historicoOcular', 'antecedentes', 'tratamentoPrevio', 'tratamentoResposta', 'motivo'];
 
+    public function arquivo(){
+        return $this->hasMany('App\Arquivo');
+    }
+
     public function paciente(){
         return $this->hasOne('App\Paciente');
     }

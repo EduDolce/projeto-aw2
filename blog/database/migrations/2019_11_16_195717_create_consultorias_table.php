@@ -16,7 +16,7 @@ class CreateConsultoriasTable extends Migration
         Schema::create('consultorias', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('lesaoOcular');
-            $table->int('tempoManifestacao');
+            $table->integer('tempoManifestacao');
             $table->text('historicoOcular');
             $table->text('antecedentes');
             $table->string('tratamentoPrevio');

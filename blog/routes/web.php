@@ -20,3 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/consultoria/solicitar', 'ConsultoriaController@solicitar')->name('consultoria.solicitar');
+
+Route::get('/consultoria/salvar', 'ConsultoriaController@salvar')->name('consultoria.salvar');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
