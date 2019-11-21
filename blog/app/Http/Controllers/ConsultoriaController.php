@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Consultoria;
+use App\Paciente;
 
 class ConsultoriaController extends Controller
 {
@@ -34,11 +36,17 @@ class ConsultoriaController extends Controller
         $paciente->iniciaisNome = $request->get('iniciaisNome');
         $paciente->dataNascimento = $request->get('dataNascimento');
         $paciente->genero = $request->get('genero');
-        $paciente->consultoria()->associate($request->consultoria());
+        //$paciente->consultoria()->associate($request->consultoria());
 
         $consultoria->save();
         $paciente->save();
 
         return 'Solicitação enviada.';
+    }
+
+    public function index(){
+        $consultorias = Consultoria::get();
+
+        return view('consultoria.index', compact('consultorias'));
     }
 }

@@ -18,6 +18,10 @@ class Consultoria extends Model
         return $this->hasOne('App\Paciente');
     }
 
+    public function resposta(){
+        return $this->hasMany('App\Resposta');
+    }
+
     public function user(){
         return $this->belongsTo('App\User');
     }

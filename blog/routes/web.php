@@ -23,6 +23,8 @@ Route::get('/consultoria/solicitar', 'ConsultoriaController@solicitar')->name('c
 
 Route::get('/consultoria/salvar', 'ConsultoriaController@salvar')->name('consultoria.salvar');
 
+Route::get('consultorias', 'ConsultoriaController@index')->name('consultoria.index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
