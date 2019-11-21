@@ -16,13 +16,19 @@ class CreateRespostasTable extends Migration
         Schema::create('respostas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('conteudo');
-            $table->integer('consultoria_id')->unsigned();
+            $table->unsignedBigInteger('consultoria_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->SoftDeletes();
 
             $table->foreign('consultoria_id')
             ->references('id')
             ->on('consultorias')
+            ->onDelete('cascade');
+
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
             ->onDelete('cascade');
         });
     }
