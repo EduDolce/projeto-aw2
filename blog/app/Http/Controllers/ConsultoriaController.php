@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Consultoria;
 use App\Paciente;
+use App\Resposta;
 
 class ConsultoriaController extends Controller
 {
@@ -48,5 +49,19 @@ class ConsultoriaController extends Controller
         $consultorias = Consultoria::get();
 
         return view('consultoria.index', compact('consultorias'));
+    }
+
+    public function responder(){
+        return view('consultoria.responder');
+    }
+
+    public function enviarResposta($id){
+        $resposta = new Resposta();
+        $resposta->conteudo = $request->get('conteudo');
+        $resposta->consultoria_id = $id;
+
+        $resposta->save();
+
+        return 'Resposta enviada.';
     }
 }

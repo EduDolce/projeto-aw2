@@ -25,6 +25,4 @@ Route::get('/consultoria/salvar', 'ConsultoriaController@salvar')->name('consult
 
 Route::get('consultorias', 'ConsultoriaController@index')->name('consultoria.index');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('consultorias/{id}', 'ConsultoriaController@responder')->name('consultoria.responder');
