@@ -1,7 +1,8 @@
 <?php
 
-use App\Medico; 
 
+namespace App\Http\Controllers;
+use App\Medico;
 class ApiController extends Controller
 {
     public function getAllMedicos() {
@@ -66,4 +67,3 @@ class ApiController extends Controller
           }
         }
     }
-}
