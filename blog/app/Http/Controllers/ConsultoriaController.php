@@ -13,6 +13,13 @@ class ConsultoriaController extends Controller
         $this->middleware('auth');
     }
 
+    public function indexAPI(){
+        
+        $resposta = Resposta::all();
+        return $spaces->toJason(); 
+
+    }
+
     public function solicitar(){
         return view('consultoria.solicitar');
     }
